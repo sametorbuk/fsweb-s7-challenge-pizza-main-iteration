@@ -28,4 +28,9 @@
 
 .footer-div-left {
     margin-left: 7rem;
+    margin-top:3rem;
+}
+
+.footer-div-mid{
+    gap:0;
 }

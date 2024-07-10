@@ -28,3 +28,22 @@ flex-direction: column;
 
 
 }
+
+
+.success-page-title {
+    color: white;
+    font-size: 2rem;
+
+}
+
+
+.success-page-order-accept-text {
+    color: white;
+    font-size: 4rem;
+    margin: 0;
+}
+
+
+.success-page-pizzas-info-text {
+    color:white;
+}

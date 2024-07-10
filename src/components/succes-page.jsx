@@ -8,24 +8,24 @@ export default function SuccessPage(props) {
 
     return(<>
     <div className="success-page-content">
-    <p>Teknolojik Yemekler</p>
+    <p className="success-page-title">Teknolojik Yemekler</p>
     <p>lezzetin yolda</p>
-    <p>Sipariş Alındı</p>
+    <p className="success-page-order-accept-text">Sipariş Alındı</p>
     
 
     <div className="success-page-order-info-div">
 
-       <p>Position Absolute Acı Pizza</p>
-       <p>Boyut: {boyut}</p>
-       <p>Hamur: {hamur}</p>
-       <p>Ex Malzemeler: {malzemeler}</p>
+       <p className="success-page-pizzas-info-text">Position Absolute Acı Pizza</p>
+       <p className="success-page-pizzas-info-text">Boyut: {boyut}</p>
+       <p className="success-page-pizzas-info-text">Hamur: {hamur}</p>
+       <p className="success-page-pizzas-info-text">Ex Malzemeler: {malzemeler}</p>
 
        
        <div className="success-page-total-div">
            
-           <p>Sipariş Toplamı</p>
-           <p>Seçimler:{malzemeler.length*5}</p>
-           <p>Toplam: {pizzaCountApp*85+malzemeler.length*5}</p>
+           <p className="success-page-pizzas-info-text" >Sipariş Toplamı</p>
+           <p className="success-page-pizzas-info-text">Seçimler:{malzemeler.length*5}₺</p>
+           <p className="success-page-pizzas-info-text">Toplam: {pizzaCountApp*85+malzemeler.length*5}₺</p>
 
 
 

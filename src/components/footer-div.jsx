@@ -18,7 +18,7 @@ return(<>
 
 
 <div className="footer-div-mid">
-<h3 className="footer-div-content" >Hot Menu</h3>
+<h4 className="footer-div-content" >Hot Menu</h4>
 <p className="footer-div-content" >Terminal Pizza</p>
 <p className="footer-div-content" >5 kişilik Hecathlon Pizza</p>
 <p className="footer-div-content" >useEffect Tavuklu Pizza</p>
@@ -30,7 +30,7 @@ return(<>
 
 
 <div className="footer-div-right">
-<h3 className="footer-div-content" >Instagram</h3>
+<h4 className="footer-div-content" >Instagram</h4>
 <div className="ınsta-photo-row1">
 <img src="/assets/iteration-2/footer/insta/li-0.png" alt="" />
 <img src="/assets/iteration-2/footer/insta/li-1.png" alt="" />
