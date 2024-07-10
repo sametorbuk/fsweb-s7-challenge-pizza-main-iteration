@@ -55,3 +55,11 @@
 .food-options-div button:hover {
  background-color:  #caabab;
 }
+
+
+.food-card-div {
+  display: flex;
+    
+    gap: 3rem;
+    margin-top: 5rem;
+}

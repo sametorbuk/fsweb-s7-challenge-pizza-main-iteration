@@ -1,0 +1,10 @@
+.food-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.food-card-content-bottom {
+ display: flex;
+}

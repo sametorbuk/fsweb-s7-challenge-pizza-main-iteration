@@ -1,8 +1,27 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import FoodOptionsDiv from "./food-options-div";
 import CtaDiv from "./cta";
+import FoodCard from "./food-card";
 
 export default function MainPageContent() {
+const foodCardArray = [{
+path:"/assets/iteration-2/pictures/food-1.png",
+name:"Terminal Pizza",
+point:"3.5",
+price:"75"
+},{
+path:"/assets/iteration-2/pictures/food-2.png",
+name:"Position Absolute Pizza",
+point:"4.5",
+price:"90"
+},{
+path:"/assets/iteration-2/pictures/food-3.png",
+name:"useEffect Burger",
+point:"3.9",
+price:"80"
+}]
+
+
 
 return (
 <>
@@ -18,6 +37,13 @@ return (
       <CtaDiv/>
       <img style={{marginTop:"7rem"}}  src="/assets/iteration-2/pictures/acıktırankodlara-doyuran-lezzetler.png" alt="" />
       <FoodOptionsDiv/>
+
+
+       <div className="food-card-div">
+      {foodCardArray.map((card)=> {
+            return <FoodCard path={card.path} name={card.name} price={card.price} point={card.point} />
+      })}
+        </div>
 
       
 
