@@ -12,6 +12,12 @@ const ingredientsArray1 = ["Pepperoni" , "Tavuk Izgara" , "Mısır","Sarımsak"]
 const ingredientsArray2 = ["Sosis","Soğan","Sucuk","Biber","Kabak"]
 const ingredientsArray3 = ["Kanada Jambonu","Domates","Jalepeno","Ananas"]
 
+const initialValues = {
+    boyut:"",
+    hamur:"",
+    malzemeler:[]
+    
+    }
 
 
 export default function OrderPageContent(props) {
@@ -68,6 +74,7 @@ function submitHandler(event) {
 
 
 function submitPostHandler() {
+   
     history.push("/success")
    axios.post("https://reqres.in/api/pizza" , formData)
    .then((response)=> console.log(response.data))
