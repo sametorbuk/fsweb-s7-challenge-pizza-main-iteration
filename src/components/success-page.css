@@ -1,0 +1,30 @@
+
+.success-page-order-info-div{
+
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+
+.success-page-content {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    background-color: rgb(161, 2, 2);
+    height: 37rem;
+}
+
+
+.success-page-total-div {
+
+display: flex;
+flex-direction: column;
+
+
+}

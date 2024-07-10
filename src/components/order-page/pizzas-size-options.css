@@ -1,0 +1,25 @@
+.size-input {
+    width: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+label {
+   
+    margin-left: 1.5rem;
+    position: relative;
+    top: 2.1rem;
+}
+
+
+.pizza-size-and-thickness-options-div {
+    display: flex;
+   
+}
+
+
+
+.pizza-thickness-options-div{
+    margin-left: 2rem;
+}

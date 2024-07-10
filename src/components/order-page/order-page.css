@@ -1,0 +1,104 @@
+
+.order-page-content {
+    display: flex;
+    flex-direction: column;
+    width: 43rem;
+    
+    padding-left: 18.5rem;
+    text-align: left;
+}
+
+
+.order-page-header {
+    background-color: #be0000;
+    display: flex;
+    flex-direction: column;
+   
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+h3 {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.header-button {
+    color:white;
+}
+
+nav {
+    margin-right: 27rem;
+}
+
+
+.pizza-info-content {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.pizza-info-content-row1 {
+    font-weight: bold;
+}
+
+.pizza-info-content-row2 {
+    display: flex;
+    
+}
+
+.pizzas-price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 ;
+    flex: 1
+}
+
+.pizzas-point {
+    flex: 0.2;
+}
+
+Form {
+    display: flex;
+    flex-direction: column;
+}
+
+.areaForNote {
+
+    margin-top: 3rem;
+}
+
+.labelForNote {
+  margin: 0;
+  font-weight: bold;
+}
+
+.order-count-and-info-div {
+
+display: flex;
+margin-top: 5rem;
+
+}
+
+.order-count-settings-div {
+    display: flex;
+}
+
+
+.count-decrease-btn ,
+.count-increase-btn {
+
+background-color: #FDC913;
+height: 3rem;
+}
+
+.total-info-and-submit-div{
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 21rem;
+    width: 15rem;
+
+}

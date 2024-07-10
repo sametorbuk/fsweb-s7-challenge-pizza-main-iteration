@@ -2,6 +2,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import FoodOptionsDiv from "./food-options-div";
 import CtaDiv from "./cta";
 import FoodCard from "./food-card";
+import FooterDiv from "./footer-div";
 
 export default function MainPageContent() {
 const foodCardArray = [{
@@ -44,6 +45,8 @@ return (
             return <FoodCard path={card.path} name={card.name} price={card.price} point={card.point} />
       })}
         </div>
+
+        <FooterDiv/>
 
       
 

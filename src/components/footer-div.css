@@ -1,0 +1,31 @@
+.footer-div {
+    display: flex;
+    gap: 3rem;
+    background-color: black;
+    width: 100vw;
+}
+
+
+
+.footer-div-left,
+.footer-div-mid,
+.footer-div-right {
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.ınsta-photo-row1,
+.ınsta-photo-row2 {
+    display: flex;
+}
+
+
+.footer-div-content{
+    color: white;
+}
+
+.footer-div-left {
+    margin-left: 7rem;
+}

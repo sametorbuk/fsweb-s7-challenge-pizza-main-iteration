@@ -63,3 +63,19 @@
     gap: 3rem;
     margin-top: 5rem;
 }
+
+
+.pizzas-ingredients-div {
+  display: flex;
+    gap: 11rem;
+    margin-top: 5rem;
+}
+
+
+.pizza-infredients-checkbox-div-left,
+.pizza-infredients-checkbox-div-mid,
+.pizza-infredients-checkbox-div-right {
+  display: flex;
+  flex-direction: column;
+
+}
