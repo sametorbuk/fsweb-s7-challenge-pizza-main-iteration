@@ -79,3 +79,19 @@
   flex-direction: column;
 
 }
+
+
+.labelForName {
+  position: relative;
+  top: 2rem;
+  font-weight: bold;
+  
+  right: 1.5rem;
+}
+
+
+.areaForName{
+  position: relative;
+    top: 3rem;
+    width: 43rem;
+}

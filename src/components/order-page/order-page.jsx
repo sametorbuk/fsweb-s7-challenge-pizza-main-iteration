@@ -24,7 +24,9 @@ const initialValues = {
         malzemeler: "Lütfen en az 4 tanesini seçiniz",
         count: "Lütfen en az 1 adet seçiniz",
         size: "Lütfen pizza boyutunu belirleyiniz",
-        category:"Lütfen hamur kalınğını seçiniz"
+        category:"Lütfen hamur kalınğını seçiniz",
+        name:"Lütfen en az 3 karakter giriniz"
+
       };
       
 
@@ -39,10 +41,11 @@ const [textAreaValue , setTextAreaValue] = useState("")
 const history = useHistory()
 
 const [errors , setErrors] = useState({
-    malzemeler: false,
+    malzemeler: true,
     count: false,
     size: true,
-    category:false
+    category:false,
+    name: true
 
 })
 
@@ -66,13 +69,20 @@ if (name === 'size') {
   }
   
   if (name === 'malzemeler') {
-    if (formData["malzemeler"].length >= 4) {
+    if (formData["malzemeler"].length >= 3) {
       setErrors({ ...errors, [name]: false });
     } else {
       setErrors({ ...errors, [name]: true });
     }
   }
-
+ 
+  if (name === 'name') {
+    if (textAreaValue.trim().length > 1) {
+      setErrors({ ...errors, [name]: false });
+    } else {
+      setErrors({ ...errors, [name]: true });
+    }
+  }
   
 
 
@@ -206,16 +216,21 @@ return (
 </div>
 
 
+<label className="labelForNote" htmlFor="not-area">Sipariş Notu</label>
+<textarea placeholder="Siparişine eklemek istediğin bir not var mı ?" className="areaForNote" name="" id="not-area"></textarea>
+
+
 <FormGroup>
-
-<label className="labelForNote" htmlFor="not-name">Ad Soyad</label>
-<textarea value={textAreaValue} onChange={textAreaHandler} placeholder="Ad Soyad" className="areaForName" name="" id="not-name"></textarea>
-
+<label className="labelForName" htmlFor="not-name">Ad Soyad</label>
+<textarea value={textAreaValue} onChange={(event) => {
+      textAreaHandler(event);
+      handleChangeError(event);
+    }} placeholder="Ad Soyad" className="areaForName" name="name" id="not-name"></textarea>
+{errors.name && <FormFeedback style={{color:"red", marginTop: "3rem"}}>{errorMessages.name}</FormFeedback>}
 </FormGroup>
 
 
-<label className="labelForNote" htmlFor="not-area">Sipariş Notu</label>
-<textarea placeholder="Siparişine eklemek istediğin bir not var mı ?" className="areaForNote" name="" id="not-area"></textarea>
+
 
 <div className="order-count-and-info-div" >
 
@@ -232,7 +247,7 @@ return (
 <p>Seçimler {formData["malzemeler"].length*5}₺</p>
 <p style={{color:"#CE2829" , fontWeight:"bold"}}  >Toplam:{pizzaCount*89.95+ formData["malzemeler"].length*5}₺</p>
 {console.log(formData)}
-<button onClick={submitPostHandler} disabled={formData.size ==="" || formData["malzemeler"].length<4} style={{backgroundColor:"#FDC913"}} type="submit" >Sipariş ver</button>
+<button onClick={submitPostHandler} disabled={formData.size ==="" || formData["malzemeler"].length<4 || textAreaValue.trim().length < 3} style={{backgroundColor:"#FDC913"}} type="submit" >Sipariş ver</button>
 </div>
 
 </div>
