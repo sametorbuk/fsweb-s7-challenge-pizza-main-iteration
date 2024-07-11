@@ -43,7 +43,8 @@ function clickIngredientsHandler(event){
  
     } else {
      setSelecetedIngredients(selectedIngredients-1)
-     setFormData({...formData , ["malzemeler"]:formData["malzemeler"].filter((item)=> !event.target.value) })
+     const filterIngredients = formData["malzemeler"].filter((item)=> item !== event.target.value)
+     setFormData({...formData , ["malzemeler"]:filterIngredients })
     }
 }
 
