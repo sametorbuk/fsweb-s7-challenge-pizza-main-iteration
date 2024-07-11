@@ -21,7 +21,7 @@ const initialValues = {
 
 
 export default function OrderPageContent(props) {
-const {formData , setFormData , countPlusHandler , countMinusHandler , pizzaCountApp , setPizzaCountApp} = props
+const {formData , setFormData , pizzaCountApp , setPizzaCountApp} = props
 const [selectedIngredients , setSelecetedIngredients]=useState(0)
 const [pizzaCount , setPizzaCount] = useState(0)
 const [textAreaValue , setTextAreaValue] = useState("")
@@ -171,8 +171,8 @@ return (
 
 <div className="total-info-and-submit-div">
 <p style={{fontWeight:"bold"}}>Sipariş Toplamı:</p>
-<p>Seçimler {formData["malzemeler"].length*5}</p>
-<p style={{color:"#CE2829" , fontWeight:"bold"}}  >Toplam:{pizzaCount*89.95+ formData["malzemeler"].length*5}</p>
+<p>Seçimler {formData["malzemeler"].length*5}₺</p>
+<p style={{color:"#CE2829" , fontWeight:"bold"}}  >Toplam:{pizzaCount*89.95+ formData["malzemeler"].length*5}₺</p>
 {console.log(formData)}
 <button onClick={submitPostHandler} disabled={formData.size ==="" || formData["malzemeler"].length<4} style={{backgroundColor:"#FDC913"}} type="submit" >Sipariş ver</button>
 </div>
