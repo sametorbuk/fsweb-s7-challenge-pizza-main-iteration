@@ -25,7 +25,7 @@ export default function SuccessPage(props) {
            
            <p className="success-page-pizzas-info-text" >Sipariş Toplamı</p>
            <p className="success-page-pizzas-info-text">Seçimler:{malzemeler.length*5}₺</p>
-           <p className="success-page-pizzas-info-text">Toplam: {(pizzaCountApp*85)+(malzemeler.length*5)}₺</p>
+           <p className="success-page-pizzas-info-text">Toplam: {(pizzaCountApp*85)+malzemeler.length*5}₺</p>
 
 
 

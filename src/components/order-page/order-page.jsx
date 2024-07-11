@@ -6,6 +6,7 @@ import { useState  } from "react"
 import axios from "axios"
 import CheckboxComp from "./pizza-checkbox"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
+import { FormFeedback, FormGroup } from "reactstrap"
 
 
 const ingredientsArray1 = ["Pepperoni" , "Tavuk Izgara" , "Mısır","Sarımsak"]
@@ -19,6 +20,16 @@ const initialValues = {
     
     }
 
+    const errorMessages = {
+        malzemeler: "Lütfen en az 4 tanesini seçiniz",
+        count: "Lütfen en az 1 adet seçiniz",
+        size: "Lütfen pizza boyutunu belirleyiniz",
+        category:"Lütfen hamur kalınğını seçiniz"
+      };
+      
+
+
+
 
 export default function OrderPageContent(props) {
 const {formData , setFormData , pizzaCountApp , setPizzaCountApp} = props
@@ -27,7 +38,49 @@ const [pizzaCount , setPizzaCount] = useState(0)
 const [textAreaValue , setTextAreaValue] = useState("")
 const history = useHistory()
 
-function clickIngredientsHandler(event){
+const [errors , setErrors] = useState({
+    malzemeler: false,
+    count: false,
+    size: true,
+    category:false
+
+})
+
+ function handleChangeError(event) {
+let {name , value , type} = event.target
+
+if (name === 'size') {
+    if (formData.size !== "") {
+      setErrors({ ...errors, [name]: false });
+    } else {
+      setErrors({ ...errors, [name]: true });
+    }
+  }
+
+  if (name === 'category') {
+    if (value !== "") {
+      setErrors({ ...errors, [name]: false });
+    } else {
+      setErrors({ ...errors, [name]: true });
+    }
+  }
+  
+  if (name === 'malzemeler') {
+    if (formData["malzemeler"].length >= 4) {
+      setErrors({ ...errors, [name]: false });
+    } else {
+      setErrors({ ...errors, [name]: true });
+    }
+  }
+
+  
+
+
+
+ }
+
+
+ function clickIngredientsHandler(event){
     const checkbox= event.target
  
     if(checkbox.checked) {
@@ -83,12 +136,6 @@ function submitPostHandler() {
 }
 
 
-
-
-
-
-
-
 return (
 <>
 <header className="order-page-header">
@@ -119,15 +166,19 @@ return (
 </div>
 
 <form onSubmit={submitHandler} >
-<PizzasSizeOptions  formData={formData} setFormData={setFormData}  />
+<PizzasSizeOptions handleChangeError={handleChangeError}  errorMessages={errorMessages} errors={errors}   formData={formData} setFormData={setFormData}  />
 
+<FormGroup>
+<h4 style={{margin:"0" , textAlign:"left" , marginTop:"3rem", color:"black" , fontSize:"1.5"}}>Ek Malzemeler</h4>
+{errors.malzemeler && <FormFeedback style={{color:"red"}}>{errorMessages.malzemeler}</FormFeedback>}
+</FormGroup>
 
 <div className="pizzas-ingredients-div">
 
 <div className="pizza-infredients-checkbox-div-left">
 
 {ingredientsArray1.map((item)=>{
-    return <CheckboxComp value={item} clickIngredientsHandler={clickIngredientsHandler} />
+    return <CheckboxComp handleChangeError={handleChangeError}  errorMessages={errorMessages} errors={errors}  value={item} clickIngredientsHandler={clickIngredientsHandler} />
 })}
 
 
@@ -135,14 +186,14 @@ return (
 <div className="pizza-infredients-checkbox-div-mid">
 
 {ingredientsArray2.map((item)=>{
-    return <CheckboxComp value={item} clickIngredientsHandler={clickIngredientsHandler} />
+    return <CheckboxComp handleChangeError={handleChangeError}   errorMessages={errorMessages} errors={errors}  value={item} clickIngredientsHandler={clickIngredientsHandler} />
 })}
 
 </div>
 <div className="pizza-infredients-checkbox-div-right">
 
 {ingredientsArray3.map((item)=>{
-    return <CheckboxComp value={item} clickIngredientsHandler={clickIngredientsHandler} />
+    return <CheckboxComp handleChangeError={handleChangeError}  errorMessages={errorMessages} errors={errors} value={item} clickIngredientsHandler={clickIngredientsHandler} />
 })}
     
 </div>
@@ -155,10 +206,16 @@ return (
 </div>
 
 
+<FormGroup>
+
+<label className="labelForNote" htmlFor="not-name">Ad Soyad</label>
+<textarea value={textAreaValue} onChange={textAreaHandler} placeholder="Ad Soyad" className="areaForName" name="" id="not-name"></textarea>
+
+</FormGroup>
 
 
 <label className="labelForNote" htmlFor="not-area">Sipariş Notu</label>
-<textarea value={textAreaValue} onChange={textAreaHandler} placeholder="Siparişine eklemek istediğin bir not var mı ?" className="areaForNote" name="" id="not-area"></textarea>
+<textarea placeholder="Siparişine eklemek istediğin bir not var mı ?" className="areaForNote" name="" id="not-area"></textarea>
 
 <div className="order-count-and-info-div" >
 
