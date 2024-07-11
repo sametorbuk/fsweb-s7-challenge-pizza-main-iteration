@@ -29,10 +29,6 @@ const initialValues = {
 
       };
       
-
-
-
-
 export default function OrderPageContent(props) {
 const {formData , setFormData , pizzaCountApp , setPizzaCountApp} = props
 const [selectedIngredients , setSelecetedIngredients]=useState(0)
