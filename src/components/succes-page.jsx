@@ -15,7 +15,7 @@ export default function SuccessPage(props) {
 
     <div className="success-page-order-info-div">
 
-       <p className="success-page-pizzas-info-text">Position Absolute Acı Pizza</p>
+       <p style={{fontWeight:"bold"}} className="success-page-pizzas-info-text">Position Absolute Acı Pizza</p>
        <p className="success-page-pizzas-info-text">Boyut: {boyut}</p>
        <p className="success-page-pizzas-info-text">Hamur: {hamur}</p>
        <p className="success-page-pizzas-info-text">Ex Malzemeler: {malzemeler.join(",")}</p>
@@ -25,7 +25,7 @@ export default function SuccessPage(props) {
            
            <p className="success-page-pizzas-info-text" >Sipariş Toplamı</p>
            <p className="success-page-pizzas-info-text">Seçimler:{malzemeler.length*5}₺</p>
-           <p className="success-page-pizzas-info-text">Toplam: {(pizzaCountApp*85)+malzemeler.length*5}₺</p>
+           <p className="success-page-pizzas-info-text">Toplam: {(pizzaCountApp*89.95)+malzemeler.length*5}₺</p>
 
 
 

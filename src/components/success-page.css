@@ -3,8 +3,7 @@
 
     display: flex;
     flex-direction: column;
-
-
+    text-align: center;
 
 }
 
@@ -23,9 +22,11 @@
 
 .success-page-total-div {
 
-display: flex;
-flex-direction: column;
-
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 10px;
 
 }
 
@@ -33,6 +34,7 @@ flex-direction: column;
 .success-page-title {
     color: white;
     font-size: 2rem;
+    font-weight: bold;
 
 }
 
@@ -41,9 +43,12 @@ flex-direction: column;
     color: white;
     font-size: 4rem;
     margin: 0;
+    border-bottom: 1px solid white;
 }
 
 
 .success-page-pizzas-info-text {
     color:white;
 }
+
+

@@ -17,19 +17,19 @@ return(<>
 </div>
 
 
-<div className="footer-div-mid">
+<div style={{marginTop:"3rem"}} className="footer-div-mid">
 <h4 className="footer-div-content" >Hot Menu</h4>
-<p className="footer-div-content" >Terminal Pizza</p>
+<p style={{margin:"0"}} className="footer-div-content" >Terminal Pizza</p>
 <p className="footer-div-content" >5 kişilik Hecathlon Pizza</p>
 <p className="footer-div-content" >useEffect Tavuklu Pizza</p>
-<p className="footer-div-content" >Beyaz Console Frosty</p>
+<p style={{margin:"0"}} className="footer-div-content" >Beyaz Console Frosty</p>
 <p className="footer-div-content" >Testler Geçti Mutlu Burger</p>
 
 
 </div>
 
 
-<div className="footer-div-right">
+<div style={{marginTop:"3rem"}} className="footer-div-right">
 <h4 className="footer-div-content" >Instagram</h4>
 <div className="ınsta-photo-row1">
 <img src="/assets/iteration-2/footer/insta/li-0.png" alt="" />
