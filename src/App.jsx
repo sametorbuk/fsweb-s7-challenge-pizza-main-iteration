@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 import './App.css'
-import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min'
+import { BrowserRouter, Route, Router, Switch , useLocation} from 'react-router-dom/cjs/react-router-dom.min'
 import MainPageContent from './components/MainPageContent'
 import OrderPageContent from './components/order-page/order-page'
 import SuccessPage from './components/succes-page'
@@ -26,11 +26,27 @@ function App() {
     setPizzaCountApp(pizzaCountApp-1)
   }
 
-
+  /*const ScrollToTop = (event) => {
+    const { pathname } = useLocation();
+ 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  };
+*/
 
   return (
     <>
+      
+   
+      
+      <BrowserRouter>
+   
+      
       <Switch>
+      
         <Route path="/" exact>
         <MainPageContent/>
        </Route>
@@ -42,9 +58,9 @@ function App() {
             <SuccessPage hamur={formData.hamur} boyut={formData.boyut} malzemeler={formData.malzemeler} pizzaCountApp={pizzaCountApp}/>
 
           </Route>
-
-      </Switch>
-
+          </Switch>
+          </BrowserRouter>
+         
     </>
   )
 }
