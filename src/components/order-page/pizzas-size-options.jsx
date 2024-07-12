@@ -64,7 +64,7 @@ return (
  <option   value="Orta">Orta</option>
  <option   value="Kalın">Kalın</option>
 </select>
-{errors.category && <FormFeedback>{errorMessages.category}</FormFeedback>}
+{errors.category && <FormFeedback style={{color:"red"}} >{errorMessages.category}</FormFeedback>}
 
 </FormGroup>
 

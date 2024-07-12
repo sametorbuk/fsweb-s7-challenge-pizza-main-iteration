@@ -1,8 +1,9 @@
 .size-input {
     width: 1rem;
     margin-top: 1rem;
+  position: relative;
+    right: 2rem;
 }
-
 
 
 label {
