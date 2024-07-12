@@ -111,6 +111,7 @@ if (name === 'size') {
 function textAreaHandler(event){
 
 setTextAreaValue(event.target.value)
+setFormData({...formData , ["name"]:event.target.value})
 }
 
 function clickCountIncrease() {

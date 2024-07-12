@@ -1,11 +1,4 @@
 
-.main-page-content {
-    background-image: url('./public/assets/iteration-1/home-banner.png');
-    background-size: cover; 
-    background-repeat: no-repeat; 
-   
-  }
-  
   
   .main-page-content {
     display: flex;
@@ -42,3 +35,45 @@
     margin-top: 2rem;
   }
   
+
+
+@media (max-width: 768px) {
+
+  .main-page-row1 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.main-page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 1rem;
+  position: relative;
+  z-index: 20;
+  bottom: 18rem;
+  right: 20rem;
+}
+
+.hungry-button {
+  width: 117.27px;
+  height: 44px;
+  border-radius: 50px;
+  background-color: #FDC913;
+  color: black;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+
+.main-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 17rem
+}
+
+
+}

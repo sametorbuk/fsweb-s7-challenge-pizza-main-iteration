@@ -58,3 +58,19 @@
    
 
 }
+
+
+@media (max-width: 768px) {
+
+    .cta-div-img {
+      
+        border-radius: 10px;
+        width: 15rem;
+        height: 9rem;
+        margin-left: 21rem;
+    }
+
+   
+
+
+}

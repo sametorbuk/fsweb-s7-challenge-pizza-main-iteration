@@ -34,3 +34,19 @@
 .footer-div-mid{
     gap:0;
 }
+
+
+
+@media (max-width: 768px) {
+
+    .footer-div-left {
+        margin-left: 1rem;
+        margin-top:3rem;
+    }
+    
+
+
+
+
+
+}
