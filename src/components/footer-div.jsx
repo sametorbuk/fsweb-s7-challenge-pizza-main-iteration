@@ -9,7 +9,7 @@ return(<>
 
 
 <div className="footer-div-left">
-<h2 className="footer-div-content">Teknolojik Yemekler</h2>
+<h2 style={{fontFamily:"Roboto Condensed"}} className="footer-div-content">Teknolojik Yemekler</h2>
 <p className="footer-div-content" ><img src="/assets/iteration-2/footer/icons/icon-1.png" alt=""/>341 Londonderry Road, İstanbul Türkiye </p>
 <p className="footer-div-content" ><img src="/assets/iteration-2/footer/icons/icon-2.png" alt=""/>aciktim@teknolojikyemekler.com</p>
 <p className="footer-div-content" ><img src="/assets/iteration-2/footer/icons/icon-3.png" alt=""/>+90 216 123 45 67</p>
