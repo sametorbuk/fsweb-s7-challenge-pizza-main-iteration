@@ -1,6 +1,6 @@
 import { useState , useEffect} from 'react'
 import './App.css'
-import { BrowserRouter, Route, Router, Switch , useLocation} from 'react-router-dom/cjs/react-router-dom.min'
+import { BrowserRouter, Route, Router, Switch } from 'react-router-dom/cjs/react-router-dom.min'
 import MainPageContent from './components/MainPageContent'
 import OrderPageContent from './components/order-page/order-page'
 import SuccessPage from './components/succes-page'
