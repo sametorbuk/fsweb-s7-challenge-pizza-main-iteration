@@ -8,6 +8,6 @@ function clickHandler() {
 }
 return(<>
 
-<button onClick={clickHandler} style={{color:"red" , backgroundColor:"white" , borderRadius:"25px"}} >Sipariş Ver</button>
+<button data-cy="main-page-order-btn" onClick={clickHandler} style={{color:"red" , backgroundColor:"white" , borderRadius:"25px"}} >Sipariş Ver</button>
 </>)
 }

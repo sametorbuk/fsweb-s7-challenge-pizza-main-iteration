@@ -31,12 +31,7 @@ function App() {
 
   return (
     <>
-      
-   
-   
-   
-      
-      <Switch>
+       <Switch>
       
         <Route path="/" exact>
         <MainPageContent/>

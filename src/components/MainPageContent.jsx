@@ -28,12 +28,12 @@ return (
 <>
 <div className="main-page-content">
 <img style={{ width: "100vw" }}src='./public/assets/iteration-1/home-banner.png' alt="" />
-<div className='main-page-header' >
+<div data-cy="main-page-header" className='main-page-header' >
    <p style={{ fontFamily: "Londrina Solid"}} className='main-page-row1'>Teknolojik Yemekler</p>
    <p style={{color:"#FDC913" , fontFamily:"Satisfy" , fontSize:"1.5rem" , margin:"0"}}>fırsatı kaçırma</p>
      <p className='main-page-row2' >KOD ACIKTIRIR</p> 
      <p className='main-page-row3' >PİZZA DOYURUR</p>
-      <Link to="/order" ><button className='hungry-button' >ACIKTIM</button></Link>  
+      <Link to="/order" ><button  className='hungry-button' >ACIKTIM</button></Link>  
       </div>
       <FoodOptionsDiv/>
       <CtaDiv/>
