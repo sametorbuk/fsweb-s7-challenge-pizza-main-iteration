@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Router, Switch } from 'react-router-dom/cjs/react
 import MainPageContent from './components/MainPageContent'
 import OrderPageContent from './components/order-page/order-page'
 import SuccessPage from './components/succes-page'
+import FooterDiv from './components/footer-div'
 
 const initialValues = {
 boyut:"",
@@ -42,13 +43,20 @@ function App() {
        </Route>
          
          <Route path="/order">
-           <OrderPageContent formData={formData} setFormData={setFormData} countPlusHandler={countPlusHandler} countMinusHandler={countMinusHandler} pizzaCountApp={pizzaCountApp} setPizzaCountApp={setPizzaCountApp}/>
+           <OrderPageContent formData={formData} 
+           setFormData={setFormData} countPlusHandler={countPlusHandler} 
+           countMinusHandler={countMinusHandler} pizzaCountApp={pizzaCountApp}
+            setPizzaCountApp={setPizzaCountApp}/>
          </Route>
           <Route path="/success">
-            <SuccessPage hamur={formData.hamur} boyut={formData.boyut} malzemeler={formData.malzemeler} pizzaCountApp={pizzaCountApp}/>
+            <SuccessPage hamur={formData.hamur}
+             boyut={formData.boyut} malzemeler={formData.malzemeler}
+              pizzaCountApp={pizzaCountApp}/>
 
           </Route>
+
           </Switch>
+          <FooterDiv/>
         
     </>
   )

@@ -47,7 +47,7 @@ return (
       })}
         </div>
 
-        <FooterDiv/>
+        
 
       
 

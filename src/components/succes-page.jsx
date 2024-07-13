@@ -38,7 +38,7 @@ export default function SuccessPage(props) {
        </div>
 
 
-     <FooterDiv/>
+     
 
     </div>
     
