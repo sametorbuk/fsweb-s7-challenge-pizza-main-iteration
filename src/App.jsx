@@ -26,23 +26,13 @@ function App() {
     setPizzaCountApp(pizzaCountApp-1)
   }
 
-  /*const ScrollToTop = (event) => {
-    const { pathname } = useLocation();
- 
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, [pathname]);
-  
-    return null;
-  };
-*/
+
 
   return (
     <>
       
    
-      
-      <BrowserRouter>
+   
    
       
       <Switch>
@@ -59,8 +49,7 @@ function App() {
 
           </Route>
           </Switch>
-          </BrowserRouter>
-         
+        
     </>
   )
 }
