@@ -244,7 +244,7 @@ return (
 <p>Seçimler {formData["malzemeler"].length*5}₺</p>
 <p style={{color:"#CE2829" , fontWeight:"bold"}}  >Toplam:{pizzaCount*89.95+ formData["malzemeler"].length*5}₺</p>
 {console.log(formData)}
-<button onClick={submitPostHandler} disabled={formData.size ==="" || formData["malzemeler"].length<4 || textAreaValue.trim().length < 3} style={{backgroundColor:"#FDC913"}} type="submit" >Sipariş ver</button>
+<button onClick={submitPostHandler} disabled={formData.size ==="" || formData["malzemeler"].length<4 || textAreaValue.trim().length < 3 || formData["hamur"] === ""} style={{backgroundColor:"#FDC913"}} type="submit" >Sipariş ver</button>
 </div>
 
 </div>
