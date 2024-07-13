@@ -131,7 +131,7 @@ function clickCountDecrease() {
 }
 
 function submitPostHandler() {
-   
+  setDurum("Loading")
    
   axios.post("https://reqres.in/api/pizza" , formData)
   .then((response)=> {
@@ -152,10 +152,6 @@ function submitPostHandler() {
 
 function submitHandler(event) {
     event.preventDefault();
-    setDurum("Loading")
-
-
-   
    
 }
 
