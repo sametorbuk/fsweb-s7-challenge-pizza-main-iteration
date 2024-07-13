@@ -10,7 +10,7 @@ return(<>
       <input name="malzemeler" onChange={(event) => {
       clickIngredientsHandler(event);
       handleChangeError(event);
-    }}  type="checkbox" id={value} value={value} />
+    }}  type="checkbox" id={value} value={value} key={value} />
 
 </>)
 
