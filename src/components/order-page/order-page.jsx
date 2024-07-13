@@ -188,7 +188,9 @@ return (
 </div>
 
 <form onSubmit={submitHandler} >
-<PizzasSizeOptions handleChangeError={handleChangeError}  errorMessages={errorMessages} errors={errors}   formData={formData} setFormData={setFormData}  />
+<PizzasSizeOptions handleChangeError={handleChangeError} 
+ errorMessages={errorMessages} errors={errors} 
+   formData={formData} setFormData={setFormData}  />
 
 <FormGroup>
 <h4 style={{margin:"0" , textAlign:"left" , marginTop:"3rem", color:"black" , fontSize:"1.5"}}>Ek Malzemeler</h4>
@@ -200,7 +202,9 @@ return (
 <div className="pizza-infredients-checkbox-div-left">
 
 {ingredientsArray1.map((item)=>{
-    return <CheckboxComp handleChangeError={handleChangeError}  errorMessages={errorMessages} errors={errors}  value={item} clickIngredientsHandler={clickIngredientsHandler} />
+    return <CheckboxComp handleChangeError={handleChangeError}
+      errorMessages={errorMessages} errors={errors} 
+      value={item} clickIngredientsHandler={clickIngredientsHandler} />
 })}
 
 
@@ -208,14 +212,21 @@ return (
 <div className="pizza-infredients-checkbox-div-mid">
 
 {ingredientsArray2.map((item)=>{
-    return <CheckboxComp handleChangeError={handleChangeError}   errorMessages={errorMessages} errors={errors}  value={item} clickIngredientsHandler={clickIngredientsHandler} />
+    return <CheckboxComp handleChangeError={handleChangeError}  
+     errorMessages={errorMessages} 
+     errors={errors}
+       value={item}
+        clickIngredientsHandler={clickIngredientsHandler} />
 })}
 
 </div>
 <div className="pizza-infredients-checkbox-div-right">
 
 {ingredientsArray3.map((item)=>{
-    return <CheckboxComp handleChangeError={handleChangeError}  errorMessages={errorMessages} errors={errors} value={item} clickIngredientsHandler={clickIngredientsHandler} />
+    return <CheckboxComp handleChangeError={handleChangeError} 
+     errorMessages={errorMessages} errors={errors} 
+     value={item}
+      clickIngredientsHandler={clickIngredientsHandler} />
 })}
     
 </div>
@@ -229,7 +240,8 @@ return (
 
 
 <label className="labelForNote" htmlFor="not-area">Sipariş Notu</label>
-<textarea placeholder="Siparişine eklemek istediğin bir not var mı ?" className="areaForNote" name="" id="not-area"></textarea>
+<textarea placeholder="Siparişine eklemek istediğin bir not var mı ?"
+ className="areaForNote" name="" id="not-area"></textarea>
 
 
 <FormGroup>
