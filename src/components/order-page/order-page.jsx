@@ -8,7 +8,7 @@ import CheckboxComp from "./pizza-checkbox"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 import { FormFeedback, FormGroup } from "reactstrap"
 
-
+ 
 const ingredientsArray1 = ["Pepperoni" , "Tavuk Izgara" , "Mısır","Sarımsak"]
 const ingredientsArray2 = ["Sosis","Soğan","Sucuk","Biber","Kabak"]
 const ingredientsArray3 = ["Kanada Jambonu","Domates","Jalepeno","Ananas"]
@@ -130,30 +130,29 @@ function clickCountDecrease() {
     }
 }
 
-function submitPostHandler() {
-  setDurum("Loading")
-   
-  axios.post("https://reqres.in/api/pizza" , formData)
-  .then((response)=> {
-   
-   setDurum("Success")
-   console.log("Başarıyla gönderildi" ,response.data)
-   history.push("/success")
- })
-  .catch((error)=> { 
-   
-   
-   setDurum("error")
-   console.log(error)})
-}
-
 
 
 
 function submitHandler(event) {
     event.preventDefault();
    
-}
+ 
+    setDurum("Loading")
+   
+    axios.post("https://reqres.in/api/pizza" , formData)
+    .then((response)=> {
+     
+     setDurum("Success")
+     console.log("Başarıyla gönderildi" ,response.data)
+     history.push("/success")
+   })
+    .catch((error)=> { 
+     
+     
+     setDurum("error")
+     console.log(error)})
+
+  }
 
 
 
@@ -271,7 +270,7 @@ return (
 <p>Seçimler {formData["malzemeler"].length*5}₺</p>
 <p style={{color:"#CE2829" , fontWeight:"bold"}}  >Toplam:{pizzaCount*89.95+ formData["malzemeler"].length*5}₺</p>
 {console.log(formData)}
-<button onClick={submitPostHandler} disabled={formData.size ==="" || formData["malzemeler"].length<4 || textAreaValue.trim().length < 3 || formData["hamur"] === ""} style={{backgroundColor:"#FDC913"}} type="submit" >Sipariş ver</button>
+<button  disabled={formData.size ==="" || formData["malzemeler"].length<4 || textAreaValue.trim().length < 3 || formData["hamur"] === ""} style={{backgroundColor:"#FDC913"}} type="submit" >Sipariş ver</button>
 </div>
 
 </div>
