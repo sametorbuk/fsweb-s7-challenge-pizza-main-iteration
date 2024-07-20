@@ -12,7 +12,7 @@ return (<>
 <img className="cta-div-right-img" src="/assets/iteration-2/cta/kart-3.png" alt="" />
 
 </div>
-
+ 
 <div className="cta-div-left-info-and-order">
     <h1 style={{margin:"0" , color:"white"}}>Özel</h1>
     <h1 style={{margin:"0",  color:"white"}}>Lezzetus</h1>

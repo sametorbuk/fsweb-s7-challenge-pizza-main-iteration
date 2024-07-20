@@ -15,7 +15,7 @@ return(<>
 <p className="footer-div-content" ><img src="/assets/iteration-2/footer/icons/icon-3.png" alt=""/>+90 216 123 45 67</p>
 
 </div>
-
+ 
 
 <div style={{marginTop:"3rem"}} className="footer-div-mid">
 <h4 className="footer-div-content" >Hot Menu</h4>

@@ -13,7 +13,7 @@ function clickSizeHandler(event) {
     setFormData({...formData , ["boyut"]:size})
    
 }
-
+ 
 function thicknesHandler(event) {
     const selected = event.target.value
     setFormData({...formData , ["hamur"]:selected})

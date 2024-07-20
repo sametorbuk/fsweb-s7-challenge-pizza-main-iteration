@@ -22,7 +22,7 @@ point:"3.9",
 price:"80"
 }]
 
-
+ 
 
 return (
 <>

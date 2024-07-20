@@ -11,7 +11,7 @@ export default function SuccessPage(props) {
     <p className="success-page-title">Teknolojik Yemekler</p>
     <p className="lezzetin-yolda">lezzetin yolda</p>
     <p className="success-page-order-accept-text">Sipariş Alındı</p>
-    
+     
 
     <div className="success-page-order-info-div">
 
